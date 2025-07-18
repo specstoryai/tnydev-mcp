@@ -78,15 +78,29 @@ Built for the unpredictable demands of AI workflows – handle spikes when agent
 ### Option 1: Claude Desktop Extension (Easiest)
 
 <div align="center">
-  <a href="https://github.com/specstoryai/tnydev-mcp/releases/latest">
+  <a href="https://github.com/specstoryai/tnydev-mcp/releases/latest/download/tnydev-mcp.dxt">
     <img src="https://img.shields.io/badge/Download%20Desktop%20Extension-→-purple?style=for-the-badge" alt="Download Extension">
   </a>
 </div>
 
-1. Download `tnydev-mcp.dxt` from [latest release](https://github.com/specstoryai/tnydev-mcp/releases/latest)
-2. Open Claude Desktop and drag the `.dxt` file into the window
-3. Enter your API key in the extension settings
-4. Start using tny.dev tools immediately!
+#### Installation Steps:
+
+1. **Download the Extension**
+   - Click the button above, or
+   - Go to [Releases](https://github.com/specstoryai/tnydev-mcp/releases) and download `tnydev-mcp.dxt`
+
+2. **Install in Claude Desktop**
+   - **Method 1**: Drag and drop the `.dxt` file into Claude Desktop
+   - **Method 2**: In Claude Desktop, go to Settings → Extensions → Install Extension → Select the `.dxt` file
+
+3. **Configure Your API Key**
+   - After installation, click on the extension settings
+   - Enter your tny.dev API key (get one at [tny.dev/account](https://www.tny.dev/account))
+   - Optionally add your domain ID for custom domains
+
+4. **Start Using**
+   - The tools are now available in your conversation
+   - Try: "Shorten this URL for me: https://example.com"
 
 ### Option 2: npm Package (For Developers)
 
@@ -1066,6 +1080,18 @@ mcp-server/
 ## 📄 License
 
 MIT
+
+## 📦 Downloads & Releases
+
+### Desktop Extension (.dxt)
+- **Latest Release**: [Download tnydev-mcp.dxt](https://github.com/specstoryai/tnydev-mcp/releases/latest/download/tnydev-mcp.dxt)
+- **All Releases**: [GitHub Releases](https://github.com/specstoryai/tnydev-mcp/releases)
+- **Auto-Updates**: Extensions update automatically in Claude Desktop
+
+### npm Package
+- **Package**: [@specstory/tnydev-mcp](https://www.npmjs.com/package/@specstory/tnydev-mcp)
+- **Install**: `npm install -g @specstory/tnydev-mcp`
+- **Direct Use**: `npx @specstory/tnydev-mcp`
 
 ## 📚 Resources
 

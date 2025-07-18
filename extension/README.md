@@ -4,9 +4,19 @@ The official Claude Desktop Extension for tny.dev URL shortener.
 
 ## Installation
 
+### Where to Get the Extension
+
+The Desktop Extension is hosted on GitHub Releases for easy access and automatic updates:
+
+- **Direct Download**: [tnydev-mcp.dxt](https://github.com/specstoryai/tnydev-mcp/releases/latest/download/tnydev-mcp.dxt)
+- **All Versions**: [GitHub Releases](https://github.com/specstoryai/tnydev-mcp/releases)
+- **Build Your Own**: Run `npm run extension:build` in the repository
+
+### Installation Methods
+
 1. **Download the Extension**
-   - Get the latest `tnydev-mcp.dxt` from [Releases](https://github.com/specstoryai/tnydev-mcp/releases)
-   - Or build it yourself with `npm run extension:build`
+   - Click the direct download link above, or
+   - Visit the releases page and download `tnydev-mcp.dxt`
 
 2. **Install in Claude Desktop**
    - Open Claude Desktop
