@@ -28,14 +28,14 @@
 
 ### Optimized for bursty AI traffic. Right when your agents need them.
 
-Built for the unpredictable demands of AI workflows – handle spikes when agents process batches, then scale down during quiet periods.
+Built to handle spikes when agents process batches.
 
 <div align="center">
   <table>
     <tr>
       <td align="center">
         <h3>🤖 Agent-First Design</h3>
-        <p>Official MCP server for Claude, Cursor, and other AI assistants. Link shortening for Natural language that just works.</p>
+        <p>Official MCP server for Claude, Cursor, and other AI assistants. Link shortening with Natural Language that just works.</p>
       </td>
       <td align="center">
         <h3>💰 200x More Economical</h3>
@@ -49,14 +49,14 @@ Built for the unpredictable demands of AI workflows – handle spikes when agent
   </table>
 </div>
 
-## 🎯 How AI Agents Compare
+## 🎯 How Link Shorteners Compare
 
 <div align="center">
 
 | Feature | tny.dev | Bitly | Rebrandly | Short.io | TinyURL |
 |---------|---------|-------|-----------|----------|---------|
 | **First-party MCP Server** | ✅ Native | ⚠️ Third-party | ✅ Native | ❌ None | ⚠️ Third-party |
-| **AI Assistant Ready** | ✅ Built-in | ⚠️ Via third-party | ✅ Built-in | ❌ No | ⚠️ Via third-party |
+| **Claude Desktop Extension** | ✅ Native .dxt | ❌ None | ❌ None | ❌ None | ❌ None |
 | **Monthly Cost** | ✅ **$9** | ❌ $199 | ⚠️ $29-35 | ⚠️ $19 | ✅ $9.99 |
 | **Hourly Rate Limit** | ✅ **500/hour** | ⚠️ ~69/hour* | ⚠️ ~35/hour* | ❌ ~1.4/hour* | ⚠️ ~14/hour* |
 | **Bulk Operations** | ✅ 100/request | ❌ Not supported | ✅ 25/request | ✅ 1,000/request | ❌ Not documented |
@@ -65,17 +65,15 @@ Built for the unpredictable demands of AI workflows – handle spikes when agent
 
 </div>
 
-## 🎨 Features
+## 🎨 Other Features
 
-- **🚀 First-Party MCP Server**: Native integration with Claude, Cursor, and other AI assistants
-- **💨 Bursty Traffic Optimized**: 500 requests/hour handles AI workflow spikes naturally
-- **🔗 Custom Domains**: Use your own domain for branded short URLs (Developer tier)
-- **✨ Custom Slugs**: Create memorable short URLs with custom slugs (Developer tier)
 - **📱 QR Codes**: Automatic QR code generation for all shortened URLs
 - **📊 Analytics**: Get detailed click analytics for your shortened links
 - **📋 Link Management**: List all your shortened links with pagination
 - **🎯 Rate Limit Awareness**: Real-time quota tracking in every response
-- **🤖 Natural Language API**: Built for how AI agents actually work
+- **🤖 Natural Language**: Built for how AI agents actually work
+- **🔗 Custom Domains**: Use your own domain for branded short URLs (Developer tier)
+- **✨ Custom Slugs**: Create memorable short URLs with custom slugs (Developer tier)
 
 ## 🚀 Quick Start
 
@@ -151,7 +149,7 @@ Visit [tny.dev](https://www.tny.dev) → Sign up → [Account Settings](https://
 - ✅ **Custom slugs** - Create memorable short links
 - ✅ **Bulk operations** - Process up to 100 URLs at once
 - ✅ **Webhooks** - Real-time event notifications
-- ✅ **Multiple API keys** - Separate keys for different environments
+- ✅ **Extra API keys** - Separate keys for different environments
 
 ## 🌐 Custom Domains (Developer Tier)
 
@@ -195,6 +193,55 @@ To use custom domains with the MCP server:
    ```
 
 ## 🔧 Installation Methods
+
+### 🚀 Quick Install
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="25%">
+        <a href="https://github.com/specstoryai/tnydev-mcp/releases/latest/download/tnydev-mcp.dxt">
+          <img src="https://img.shields.io/badge/Claude-Desktop-7c3aed?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Desktop">
+        </a>
+        <br>
+        <sub><b>Claude Desktop</b></sub>
+        <br>
+        <sub>Download .dxt extension</sub>
+      </td>
+      <td align="center" width="25%">
+        <a href="https://cursor.com/install-mcp?name=tny-dev&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40specstory%2Ftnydev-mcp%22%5D%2C%22env%22%3A%7B%22TNY_DEV_API_KEY%22%3A%22your_api_key_here%22%7D%7D">
+          <img src="https://img.shields.io/badge/Cursor-IDE-00C4B3?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMyA3VjE3TDEyIDIyTDIxIDE3VjdMMTIgMloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==&logoColor=white" alt="Cursor">
+        </a>
+        <br>
+        <sub><b>Cursor</b></sub>
+        <br>
+        <sub>One-click install</sub>
+      </td>
+      <td align="center" width="25%">
+        <a href="https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%7B%22name%22%3A%22tny-dev%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40specstory%2Ftnydev-mcp%22%5D%2C%22env%22%3A%7B%22TNY_DEV_API_KEY%22%3A%22your_api_key_here%22%7D%7D">
+          <img src="https://img.shields.io/badge/VS_Code-Editor-0078d7?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code">
+        </a>
+        <br>
+        <sub><b>VS Code</b></sub>
+        <br>
+        <sub>Quick setup</sub>
+      </td>
+      <td align="center" width="25%">
+        <a href="https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%7B%22name%22%3A%22tny-dev%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40specstory%2Ftnydev-mcp%22%5D%2C%22env%22%3A%7B%22TNY_DEV_API_KEY%22%3A%22your_api_key_here%22%7D%7D">
+          <img src="https://img.shields.io/badge/VS_Code-Insiders-1ba672?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code Insiders">
+        </a>
+        <br>
+        <sub><b>VS Code Insiders</b></sub>
+        <br>
+        <sub>Preview build</sub>
+      </td>
+    </tr>
+  </table>
+  
+  <p align="center">
+    <sub>💡 <b>Note:</b> For VS Code and Cursor, remember to replace <code>your_api_key_here</code> with your actual <a href="https://www.tny.dev/account">tny.dev API key</a></sub>
+  </p>
+</div>
 
 ### 🖥️ Claude Desktop Extension (Recommended)
 
@@ -710,8 +757,7 @@ Check your client's documentation for the specific configuration file location a
    .vscode/settings.json
    ```
 
-4. **Key Rotation**
-   - Regularly rotate API keys
+4. **Keys**
    - Use different keys for different environments
    - Monitor key usage in your tny.dev dashboard
 
@@ -721,11 +767,12 @@ See how AI assistants naturally use tny.dev in real conversations – no code re
 
 ### Traditional API Approach vs. MCP Server
 
+<div align="center">
 <table>
 <tr>
-<td width="50%">
+<td valign="top" width="50%">
 
-**❌ Traditional API Approach**
+#### ❌ Traditional API Approach
 
 ```python
 # Step 1: Write code to call API
@@ -751,19 +798,28 @@ shortened = [shorten_url(link) for link in links]
 ```
 
 </td>
-<td width="50%">
+<td valign="top" width="50%">
 
-**✅ With tny.dev MCP Server**
+#### ✅ With tny.dev MCP Server
 
-💬 **You**: "I'm writing a blog post about React hooks. Please shorten these documentation links and organize them by hook type."
+```
+💬 You: "I'm writing a blog post about React 
+hooks. Please shorten these documentation 
+links and organize them by hook type."
 
-🤖 **Claude**: "I'll shorten those React documentation links and organize them by hook type for you..."
+🤖 Claude: "I'll shorten those React 
+documentation links and organize them by 
+hook type for you..."
 
-*[Automatically processes all links using MCP]*
+[Automatically processes all links using MCP]
+```
+
+**No code required!** Just natural conversation.
 
 </td>
 </tr>
 </table>
+</div>
 
 ### Common AI Agent Workflows
 
