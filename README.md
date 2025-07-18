@@ -215,7 +215,7 @@ For advanced users who prefer manual configuration:
 <details>
 <summary><b>📱 Claude Desktop (Manual)</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Edit your Claude Desktop configuration:
 - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -245,7 +245,8 @@ Edit your Claude Desktop configuration:
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -271,7 +272,7 @@ Restart Claude Desktop for changes to take effect.
 <details>
 <summary><b>🎯 Cursor</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Cursor supports multiple configuration methods:
 
@@ -305,7 +306,8 @@ Add to your `.vscode/settings.json` or User Settings:
       "command": "npx",
       "args": ["-y", "@specstory/tnydev-mcp"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -321,7 +323,8 @@ Add to your `.vscode/settings.json` or User Settings:
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -334,7 +337,7 @@ Add to your `.vscode/settings.json` or User Settings:
 <details>
 <summary><b>🌊 Windsurf</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Add to your Windsurf settings:
 
@@ -362,7 +365,8 @@ Add to your Windsurf settings:
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -373,7 +377,7 @@ Add to your Windsurf settings:
 <details>
 <summary><b>🤖 Cline (VS Code Extension)</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Add to your VSCode settings (`.vscode/settings.json` or User Settings):
 
@@ -384,7 +388,8 @@ Add to your VSCode settings (`.vscode/settings.json` or User Settings):
       "command": "npx",
       "args": ["-y", "@specstory/tnydev-mcp"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -400,7 +405,8 @@ Add to your VSCode settings (`.vscode/settings.json` or User Settings):
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -416,7 +422,8 @@ For Cursor specifically, you can also create `.cursor/mcp.json` in your project 
       "command": "npx",
       "args": ["-y", "@specstory/tnydev-mcp"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -427,7 +434,7 @@ For Cursor specifically, you can also create `.cursor/mcp.json` in your project 
 <details>
 <summary><b>💻 VS Code (with Continue, Codeqwen, or other AI extensions)</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Add to your VS Code settings (`settings.json`):
 
@@ -460,7 +467,8 @@ Add to your VS Code settings (`settings.json`):
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -471,7 +479,7 @@ Add to your VS Code settings (`settings.json`):
 <details>
 <summary><b>⚡ Zed</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Add to your Zed settings:
 
@@ -517,7 +525,7 @@ Add to your Zed settings:
 <details>
 <summary><b>🚀 Claude Code</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Add as a locally-scoped server using the CLI:
 
@@ -534,7 +542,8 @@ Or create a `.mcp.json` file in your project root:
       "command": "npx",
       "args": ["-y", "@specstory/tnydev-mcp"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -551,7 +560,7 @@ claude mcp add tny-dev -s local -e TNY_DEV_API_KEY=your_api_key_here -- node /ab
 <details>
 <summary><b>🤖 Roo Coder</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Add to your Roo Coder settings:
 
@@ -579,7 +588,8 @@ Add to your Roo Coder settings:
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -590,7 +600,7 @@ Add to your Roo Coder settings:
 <details>
 <summary><b>🎨 Void</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Add to your Void configuration:
 
@@ -618,7 +628,8 @@ Add to your Void configuration:
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -629,7 +640,7 @@ Add to your Void configuration:
 <details>
 <summary><b>🛠️ Other MCP Clients</b></summary>
 
-#### Using npx (Recommended - once published)
+#### Using npx (Recommended)
 
 Most MCP clients support a similar configuration format:
 
@@ -640,7 +651,8 @@ Most MCP clients support a similar configuration format:
       "command": "npx",
       "args": ["-y", "@specstory/tnydev-mcp"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -656,7 +668,8 @@ Most MCP clients support a similar configuration format:
       "command": "node",
       "args": ["/absolute/path/to/tinylink/mcp-server/dist/index.js"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
@@ -836,7 +849,8 @@ Show me all my shortened links
       "command": "npx",
       "args": ["-y", "@specstory/tnydev-mcp"],
       "env": {
-        "TNY_DEV_API_KEY": "your_api_key_here"
+        "TNY_DEV_API_KEY": "your_api_key_here",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"  // Optional
       }
     }
   }
