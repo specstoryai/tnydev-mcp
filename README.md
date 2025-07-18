@@ -3,8 +3,8 @@
     <img src="https://www.tny.dev/tny.svg" alt="tny.dev" height="30" style="vertical-align: middle; margin-right: 10px;">
     MCP Server
   </h1>
-  <p><strong>The API-first link shortener built for AI agents</strong></p>
-  <p>First-party MCP server for Claude, Cursor, and other AI assistants</p>
+  <h2>The API-first link shortener built for AI agents</h2>
+  <p>First-party MCP server & DXT for Claude, Cursor, and other AI assistants</p>
   
   [![npm version](https://img.shields.io/npm/v/@specstory/tnydev-mcp.svg)](https://www.npmjs.com/package/@specstory/tnydev-mcp)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -35,7 +35,7 @@ Built for the unpredictable demands of AI workflows – handle spikes when agent
     <tr>
       <td align="center">
         <h3>🤖 Agent-First Design</h3>
-        <p>Official MCP server for Claude, Cursor, and other AI assistants. Natural language API that just works.</p>
+        <p>Official MCP server for Claude, Cursor, and other AI assistants. Link shortening for Natural language that just works.</p>
       </td>
       <td align="center">
         <h3>💰 200x More Economical</h3>
