@@ -1,13 +1,14 @@
 <div align="center">
   <h1>
     <img src="https://www.tny.dev/tny.svg" alt="tny.dev" height="30" style="vertical-align: middle; margin-right: 10px;">
-    tny.dev MCP Server
+    MCP Server
   </h1>
   <p><strong>The API-first link shortener built for AI agents</strong></p>
   <p>First-party MCP server for Claude, Cursor, and other AI assistants</p>
   
   [![npm version](https://img.shields.io/npm/v/@specstory/tnydev-mcp.svg)](https://www.npmjs.com/package/@specstory/tnydev-mcp)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/21be2.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
   [![Node.js Version](https://img.shields.io/node/v/@specstory/tnydev-mcp)](https://nodejs.org)
   [![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue)](https://modelcontextprotocol.io)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)](https://www.typescriptlang.org/)
