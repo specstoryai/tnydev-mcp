@@ -155,7 +155,7 @@ To use custom domains with the MCP server:
 
 1. **Add a Custom Domain**: In your tny.dev account, navigate to the Domains section and add your custom domain
 2. **Verify Domain**: Complete the DNS verification process
-3. **Get Domain ID**: Once verified, copy your domain ID (format: `dom_xxxxx`)
+3. **Get Domain ID**: Once verified, copy your domain ID (format: `your_domain_id_here`)
 4. **Configure MCP Server**: Either:
    - Set `TNY_DEV_DEFAULT_DOMAIN_ID` environment variable for global default
    - Pass `domainId` parameter when creating short URLs
@@ -793,10 +793,10 @@ Create a shortened URL with support for custom domains and slugs (Developer tier
 Use the shorten_url tool to create a short link for https://example.com/very/long/url
 
 # With custom domain and slug
-Use the shorten_url tool to create a short link for https://example.com with customSlug "my-link" and domainId "dom_123"
+Use the shorten_url tool to create a short link for https://example.com with customSlug "my-link" and domainId "your_domain_id_here"
 
 # With custom domain only (random slug)
-Use the shorten_url tool to create a short link for https://example.com with domainId "dom_123"
+Use the shorten_url tool to create a short link for https://example.com with domainId "your_domain_id_here"
 ```
 
 **Note:** Custom domains and slugs require a Developer tier subscription. You can configure a default domain ID using the `TNY_DEV_DEFAULT_DOMAIN_ID` environment variable.
@@ -869,7 +869,7 @@ Show me all my shortened links
       "args": ["-y", "@specstory/tnydev-mcp"],
       "env": {
         "TNY_DEV_API_KEY": "your_api_key_here",
-        "TNY_DEV_DEFAULT_DOMAIN_ID": "dom_xxxxx"
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "your_domain_id_here"
       }
     }
   }

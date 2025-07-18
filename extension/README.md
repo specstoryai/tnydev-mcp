@@ -98,7 +98,7 @@ npm run extension:build
 ### Custom Domains Not Working
 - Custom domains require the Developer plan
 - Ensure your domain is verified
-- Use the correct domain ID format: `dom_xxxxx`
+- Use the correct domain ID format: `your_domain_id_here`
 
 ## Support
 

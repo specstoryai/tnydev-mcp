@@ -34,7 +34,7 @@
       "description": "Domain ID for custom domains (Developer tier feature)",
       "type": "string",
       "required": false,
-      "placeholder": "dom_xxxxx"
+      "placeholder": "your_domain_id_here"
     },
     "base_url": {
       "label": "API Base URL",
