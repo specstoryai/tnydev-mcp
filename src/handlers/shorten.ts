@@ -17,7 +17,7 @@ const ShortenUrlSchema = z.object({
 
 export async function handleShortenUrl(params: unknown, client: TnyDevClient): Promise<{ content: Array<{ type: string; text: string }> }> {
   // Better error message for empty params
-  if (!params || (typeof params === 'object' && Object.keys(params as object).length === 0)) {
+  if (!params || (typeof params === 'object' && Object.keys(params).length === 0)) {
     throw new Error('Please provide a URL to shorten. Usage: shorten_url with parameter url: "https://example.com"');
   }
   
