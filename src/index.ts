@@ -13,15 +13,22 @@ import { handleShortenUrl, shortenUrlTool } from './handlers/shorten.js';
 import { handleGetAnalytics, getAnalyticsTool } from './handlers/analytics.js';
 import { handleListLinks, listLinksTool } from './handlers/links.js';
 
-// Load environment variables
-dotenv.config();
+// Load environment variables only if not in Desktop Extension mode
+if (process.env.TNY_DEV_DESKTOP_EXTENSION !== 'true') {
+  dotenv.config();
+}
 
 // Debug logging
-if (process.env.DEBUG) {
+if (process.env.DEBUG || process.env.TNY_DEV_DESKTOP_EXTENSION) {
   console.error('[DEBUG] Starting tny.dev MCP server...');
   console.error('[DEBUG] Node version:', process.version);
   console.error('[DEBUG] Working directory:', process.cwd());
   console.error('[DEBUG] Script location:', import.meta.url);
+  console.error('[DEBUG] Environment check:');
+  console.error('  - TNY_DEV_API_KEY:', process.env.TNY_DEV_API_KEY ? 'Set (hidden)' : 'Not set');
+  console.error('  - TNY_DEV_DESKTOP_EXTENSION:', process.env.TNY_DEV_DESKTOP_EXTENSION);
+  console.error('  - TNY_DEV_DEFAULT_DOMAIN_ID:', process.env.TNY_DEV_DEFAULT_DOMAIN_ID || 'Not set');
+  console.error('  - TNY_DEV_BASE_URL:', process.env.TNY_DEV_BASE_URL || 'Not set');
 }
 
 // Validate API key

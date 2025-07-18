@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { TnyDevClient } from '../client.js';
+import { ShortenRequest } from '../types.js';
 
 const ShortenUrlSchema = z.object({
   url: z.string().url().describe('The URL to shorten'),
@@ -15,10 +16,20 @@ const ShortenUrlSchema = z.object({
 });
 
 export async function handleShortenUrl(params: unknown, client: TnyDevClient): Promise<{ content: Array<{ type: string; text: string }> }> {
+  // Better error message for empty params
+  if (!params || (typeof params === 'object' && Object.keys(params as object).length === 0)) {
+    throw new Error('Please provide a URL to shorten. Usage: shorten_url with parameter url: "https://example.com"');
+  }
+  
   const parsed = ShortenUrlSchema.parse(params);
   
   // Get default domain ID from environment if not provided
-  const domainId = parsed.domainId || process.env.TNY_DEV_DEFAULT_DOMAIN_ID;
+  let domainId = parsed.domainId || process.env.TNY_DEV_DEFAULT_DOMAIN_ID;
+  
+  // Clean up domain ID - if it's the literal template string, treat as empty
+  if (domainId === '${user_config.domain_id}' || domainId === '') {
+    domainId = undefined;
+  }
   
   // Validate that customSlug requires domainId
   if (parsed.customSlug && !domainId) {
@@ -26,11 +37,20 @@ export async function handleShortenUrl(params: unknown, client: TnyDevClient): P
   }
   
   try {
-    const result = await client.shortenUrl({
-      url: parsed.url,
-      customSlug: parsed.customSlug,
-      domain_id: domainId
-    });
+    // Build request object, only including domain_id if it exists
+    const requestObj: ShortenRequest = {
+      url: parsed.url
+    };
+    
+    if (parsed.customSlug) {
+      requestObj.customSlug = parsed.customSlug;
+    }
+    
+    if (domainId) {
+      requestObj.domain_id = domainId;
+    }
+    
+    const result = await client.shortenUrl(requestObj);
     
     const rateLimitInfo = client.getRateLimitInfo();
     
@@ -55,7 +75,7 @@ export async function handleShortenUrl(params: unknown, client: TnyDevClient): P
 
 export const shortenUrlTool = {
   name: "shorten_url",
-  description: "Create a shortened URL using tny.dev. Supports custom domains and slugs for developer tier users.",
+  description: "Create a shortened URL using tny.dev. Pass the full URL you want to shorten in the 'url' parameter.",
   inputSchema: {
     type: "object",
     properties: {
