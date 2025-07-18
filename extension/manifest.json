@@ -1,0 +1,83 @@
+{
+  "dxt_version": "0.1",
+  "name": "tnydev-mcp",
+  "display_name": "tny.dev URL Shortener",
+  "version": "1.0.0",
+  "description": "Official MCP server for tny.dev - The API-first link shortener built for AI agents",
+  "long_description": "Create shortened URLs, track analytics, and manage links directly from Claude Desktop. Features custom domains, QR codes, and real-time analytics. Perfect for developers, marketers, and AI workflows.",
+  "author": "SpecStory AI",
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/index.js"],
+      "env": {
+        "TNY_DEV_API_KEY": "${user_config.api_key}",
+        "TNY_DEV_DEFAULT_DOMAIN_ID": "${user_config.domain_id}",
+        "TNY_DEV_BASE_URL": "${user_config.base_url}",
+        "TNY_DEV_DESKTOP_EXTENSION": "true"
+      }
+    }
+  },
+  "user_config": {
+    "api_key": {
+      "label": "tny.dev API Key",
+      "description": "Get your API key from https://www.tny.dev/account",
+      "type": "secret",
+      "required": true,
+      "placeholder": "tnyl_..."
+    },
+    "domain_id": {
+      "label": "Default Domain ID",
+      "description": "Domain ID for custom domains (Developer tier feature)",
+      "type": "string",
+      "required": false,
+      "placeholder": "dom_xxxxx"
+    },
+    "base_url": {
+      "label": "API Base URL",
+      "description": "Override the API base URL (advanced users only)",
+      "type": "string",
+      "required": false,
+      "default": "https://www.tny.dev/api/v1"
+    }
+  },
+  "tools": [
+    {
+      "name": "shorten_url",
+      "description": "Create shortened URLs with custom domains/slugs"
+    },
+    {
+      "name": "get_link_analytics",
+      "description": "Get detailed click analytics for your links"
+    },
+    {
+      "name": "list_links",
+      "description": "List all your shortened links with pagination"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "bulk_shorten",
+      "description": "Shorten multiple URLs at once",
+      "prompt": "I have a list of URLs that I need to shorten. Please help me shorten them and organize the results."
+    },
+    {
+      "name": "campaign_links",
+      "description": "Create campaign tracking links",
+      "prompt": "I need to create shortened links for a marketing campaign. Please help me create trackable links with meaningful slugs."
+    },
+    {
+      "name": "link_report",
+      "description": "Generate analytics report",
+      "prompt": "Please generate a report of my most clicked links from the past week, including total clicks and top referrers."
+    }
+  ],
+  "compatibility": {
+    "platforms": ["windows", "macos", "linux"],
+    "node_version": ">=18.0.0",
+    "claude_desktop_version": ">=0.7.0"
+  }
+}

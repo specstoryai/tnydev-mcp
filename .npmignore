@@ -1,0 +1,38 @@
+# Source files (only ship compiled)
+src/
+tsconfig.json
+
+# Development files
+.env
+.env.example
+*.log
+node_modules/
+.git/
+.gitignore
+
+# Documentation files
+REPOSITORY_SETUP.md
+CONTRIBUTING.md
+.github/
+
+# Test files
+*.test.ts
+*.spec.ts
+coverage/
+.nyc_output/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Build artifacts
+*.tsbuildinfo
+
+# Extension files
+extension/
+scripts/
+*.dxt
+extension-build/
