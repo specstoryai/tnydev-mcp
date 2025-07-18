@@ -1,5 +1,8 @@
 <div align="center">
-  <h1>tny.dev MCP Server</h1>
+  <h1>
+    <img src="https://www.tny.dev/tny.svg" alt="tny.dev" height="30" style="vertical-align: middle; margin-right: 10px;">
+    tny.dev MCP Server
+  </h1>
   <p><strong>The API-first link shortener built for AI agents</strong></p>
   <p>First-party MCP server for Claude, Cursor, and other AI assistants</p>
   
