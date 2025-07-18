@@ -2,7 +2,7 @@
   "dxt_version": "0.1",
   "name": "tnydev-mcp",
   "display_name": "tny.dev URL Shortener",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Official MCP server for tny.dev - The API-first link shortener built for AI agents",
   "icon": "icon.png",
   "author": {
